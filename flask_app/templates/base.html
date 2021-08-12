@@ -1,32 +1,35 @@
-<html>
-    <head>
-        {% if title %}
-        <title>{{ title }}</title>
-        {% else %}
-        <title>spam conspiracy</title>
-        {% endif %}
-    </head>
-    <body>
-        <div>
-            INSERT_NAME_HERE:
-            <a href="{{ url_for('index') }}">Home</a>
-            {% if current_user.is_anonymous %}
-            <a href="{{ url_for('login') }}">Login</a>
-            {% else %}
-            <a href="{{ url_for('logout') }}">Logout</a>
-            {% endif %}
+{% extends 'bootstrap/base.html' %}
 
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='main.css')}}">
+{% endblock %}
+
+{% block title %}
+    {% if title %}{{ title }} - LawSuite{% else %}Welcome to LawSuite{% endif %}
+{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div>
+            <a class="navbar-brand" href="{{url_for('index')}}"><font size="+3"><span style="color:Navy;">Law</span>Suite</font></a>
+            <a href="{{url_for('login')}}"><button type="button" class="btn btn-default navbar-btn" style="float: right;  margin-right: 10px;">Sign in</button></a>
         </div>
-        <hr>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
-        <ul>
             {% for message in messages %}
-            <li>{{ message }}</li>
+            <div class="alert alert-info" role="alert">{{ message }}</div>
             {% endfor %}
-        </ul>
         {% endif %}
         {% endwith %}
-        {% block content %}{% endblock %}
-    </body>
-</html>
+
+        {# application content needs to be provided in the app_content block #}
+        {% block app_content %}{% endblock %}
+    </div>
+{% endblock %}
