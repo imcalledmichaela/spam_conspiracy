@@ -11,6 +11,11 @@ from flask_app.forms import RegistrationForm
 def index():
     return render_template('index.html', title='Home')
 
+@app.route('/prompts')
+# @login_required
+def prompts():
+    return render_template('prompts.html', title='Question Prompts')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:

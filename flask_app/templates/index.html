@@ -1,60 +1,101 @@
 {% extends "base.html" %}
 
-{% block navbar %}
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div>
-            <a class="navbar-brand" href="{{url_for('index')}}"><font size="+3"><span style="color:Navy;">Law</span>Suite</font></a>
-            {% if current_user.is_anonymous %}
-            <a href="{{url_for('login')}}"><button type="button" class="btn btn-default navbar-btn" style="float: right;  margin-right: 10px;">Sign in</button></a>
-            {% else %}
-            <a href="{{url_for('logout')}}"><button type="button" class="btn btn-default navbar-btn" style="float: right;  margin-right: 10px;">Sign out</button></a>
-            {% endif %}
-        </div>
-    </nav>
-{% endblock %}
-
 {% block content %}
-    <div class="gamerow" style="margin-left: 385px;">
-        <div class="col-sm-10 col-md-8">
+    <div class="gamerow">
+        <div class="col-sm-8 col-md-6">
         <div class="thumbnail">
-            <img src="https://sm.ign.com/ign_ap/screenshot/default/screenshot-gathertown-20210709-17-56-26fffd_jx1f.png"">
+            <div class="large-image">
+                <img src="https://sm.ign.com/ign_ap/screenshot/default/screenshot-gathertown-20210709-17-56-26fffd_jx1f.png" class="img-rounded large-thumbnail-img">
+            </div>
             <div class="caption">
             <h3>Gather Town</h3>
-            <p>Gather Town is a web-conferencing software like Zoom, but with the added component of seeing the virtual “room” you and others are occupying, and with the ability to move around and interact with other participants based on your locations in the room, just like real life.</p>
+            <p class="large-description">Gather Town is a web-conferencing software like Zoom, but with the added component of seeing the virtual “room” you and others are occupying, and with the ability to move around and interact with other participants based on your locations in the room, just like real life.</p>
             <p><a href="https://www.gather.town/" target="_blank" class="btn btn-primary" role="button">Play Game!</a></p>
             </div>
         </div>
         </div>
+        <div class="col-sm-8 col-md-6">
+            <div class="thumbnail">
+                <div class="large-image">
+                    <img src="https://sm.ign.com/ign_ap/screenshot/default/screenshot-gathertown-20210709-17-56-26fffd_jx1f.png" class="img-rounded large-thumbnail-img">
+                </div>
+                <div class="caption">
+                <h3>Question Prompts</h3>
+                <p class="large-description">Feeling awkward with somebody you just met? Did your mind go blank? Question Prompts is here to help! Here are some questions to get the conversation going.</p>
+                <p><a href="{{url_for('prompts')}}" class="btn btn-primary" role="button">Play Game!</a></p>
+                </div>
+            </div>
+            </div>
     </div>
 
     <div class="gamerow">
         <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-            <img src="https://garticphone.com/images/thumb.png" class="thumbnail-img">
+            <div class="image">
+                <img src="https://garticphone.com/images/thumb.png" class="img-rounded thumbnail-img">
+            </div>
             <div class="caption">
             <h3>Gartic Phone</h3>
-            <p>Gartic Telephone is an online game that mixes Pictionary with the Telephone game (the game where you whisper into the next person's ear all the way round the group and compare the original phrase to what was whispered). This game is the visual version of that: where you draw what you see, and guess what you saw!</p>
+            <p class="description">Gartic Telephone is an online game that mixes Pictionary with the Telephone game (the game where you whisper into the next person's ear all the way round the group and compare the original phrase to what was whispered). This game is the visual version of that: where you draw what you see, and guess what you saw!</p>
             <p><a href="https://garticphone.com/" target="_blank" class="btn btn-primary" role="button">Play Game!</a></p>
             </div>
         </div>
         </div>
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-            <img src="https://skribbl.io/res/thumbnail.png" class="thumbnail-img" style="padding-bottom: 10px;">
+                <div class="image"><img src="https://skribbl.io/res/thumbnail.png" class="img-rounded thumbnail-img"></div>
             <div class="caption">
                 <h3>Skribbl.io</h3>
-                <p>Skribbl.io is a free multiplayer drawing and guessing game. One game consists of a few rounds in which every round someone has to draw their chosen word and others have to guess it to gain points! The person with the most points at the end of game will then be crowned as the winner!</p>
+                <p class="description">Skribbl.io is a free multiplayer drawing and guessing game. One game consists of a few rounds in which every round someone has to draw their chosen word and others have to guess it to gain points! The person with the most points at the end of game will then be crowned as the winner!</p>
                 <p><a href="https://skribbl.io/" target="_blank" class="btn btn-primary">Play Game!</a></p>
             </div>
             </div>
         </div>
         <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-            <img src="https://www.shellshock.io/img/previewImage_shellShockers.jpg" class="thumbnail-img" style="padding-bottom: 40px;">
+                <div class="image">
+                    <img src="https://www.shellshock.io/img/previewImage_shellShockers.jpg" class="img-rounded thumbnail-img">
+                </div>
             <div class="caption">
                 <h3>Shell Shockers</h3>
-                <p>Shell Shockers is the world's most popular egg-based multiplayer first person shooter! Take control of a heavily armed egg and battle real players across multiplayer maps in private or public arenas. The hit web FPS game comes to your mobile device for eggciting free-range action!</p>
-                <br>
+                <p class="description">Shell Shockers is the world's most popular egg-based multiplayer first person shooter! Take control of a heavily armed egg and battle real players across multiplayer maps in private or public arenas. The hit web FPS game comes to your mobile device for eggciting free-range action!</p>
+                <p><a href="https://shellshock.io/" target="_blank" class="btn btn-primary" role="button">Play Game!</a></p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gamerow">
+        <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <div class="image">
+                <img src="https://garticphone.com/images/thumb.png" class="img-rounded thumbnail-img">
+            </div>
+            <div class="caption">
+            <h3>Gartic Phone</h3>
+            <p class="description">Gartic Telephone is an online game that mixes Pictionary with the Telephone game (the game where you whisper into the next person's ear all the way round the group and compare the original phrase to what was whispered). This game is the visual version of that: where you draw what you see, and guess what you saw!</p>
+            <p><a href="https://garticphone.com/" target="_blank" class="btn btn-primary" role="button">Play Game!</a></p>
+            </div>
+        </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="image"><img src="https://skribbl.io/res/thumbnail.png" class="img-rounded thumbnail-img"></div>
+            <div class="caption">
+                <h3>Skribbl.io</h3>
+                <p class="description">Skribbl.io is a free multiplayer drawing and guessing game. One game consists of a few rounds in which every round someone has to draw their chosen word and others have to guess it to gain points! The person with the most points at the end of game will then be crowned as the winner!</p>
+                <p><a href="https://skribbl.io/" target="_blank" class="btn btn-primary">Play Game!</a></p>
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="image">
+                    <img src="https://www.shellshock.io/img/previewImage_shellShockers.jpg" class="img-rounded thumbnail-img">
+                </div>
+            <div class="caption">
+                <h3>Shell Shockers</h3>
+                <p class="description">Shell Shockers is the world's most popular egg-based multiplayer first person shooter! Take control of a heavily armed egg and battle real players across multiplayer maps in private or public arenas. The hit web FPS game comes to your mobile device for eggciting free-range action!</p>
                 <p><a href="https://shellshock.io/" target="_blank" class="btn btn-primary" role="button">Play Game!</a></p>
             </div>
             </div>

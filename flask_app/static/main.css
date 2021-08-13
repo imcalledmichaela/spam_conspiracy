@@ -12,12 +12,12 @@
 
 .navbar-brand {
     font-family: Recoleta Alt SemiBold;
+    text-align: center;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    padding-top: 70px;
-    /* margin: 20px; */
+    padding-top: 87px;
 }
 
 .row {
@@ -38,11 +38,55 @@ body {
 }
 
 .thumbnail-img {
-    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.image {
     width: 442px;
-    height: 350px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
+}
+
+.description {
+    height: 130px;
+}
+
+.large-description {
+    height: 60px;
+}
+
+.large-thumbnail-img {
+    width: 100%;
+    height: auto;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+.large-image {
+    width: 680px;
+    height: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
 }
 
 h3 {
     font-family: Recoleta Alt SemiBold;
+}
+
+.questions {
+    margin: 15px;
+}
+
+.card {
+    margin-bottom: 20px;
 }

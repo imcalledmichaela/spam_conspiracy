@@ -2,6 +2,7 @@
 
 {% block styles %}
 {{super()}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 <link rel="stylesheet"
       href="{{url_for('.static', filename='main.css')}}">
 {% endblock %}
@@ -13,8 +14,12 @@
 {% block navbar %}
     <nav class="navbar navbar-default navbar-fixed-top">
         <div>
-            <a class="navbar-brand" href="{{url_for('index')}}"><font size="+3"><span style="color:Navy;">Law</span>Suite</font></a>
+            <a class="navbar-brand" href="{{url_for('index')}}"><h1><span style="color:Navy;">Law</span>Suite</h1></a>
+            {% if current_user.is_anonymous %}
             <a href="{{url_for('login')}}"><button type="button" class="btn btn-default navbar-btn" style="float: right;  margin-right: 10px;">Sign in</button></a>
+            {% else %}
+            <a href="{{url_for('logout')}}"><button type="button" class="btn btn-default navbar-btn" style="float: right;  margin-right: 10px;">Sign out</button></a>
+            {% endif %}
         </div>
     </nav>
 {% endblock %}
