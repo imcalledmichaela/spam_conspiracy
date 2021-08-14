@@ -1,77 +1,34 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid" style="background-color: #222222; margin-top: -30px;">
         <div class="container">
-        <h2 class="display-4" style="font-family: Recoleta Alt SemiBold; text-align: center;">Welcome to LawSuite's Question Prompts</h2>
-        <p class="lead" style="text-align: center;">Here are some questions to get the converstation going!</p>
-        </div>
+        <h2 class="display-4" style="font-family: Recoleta Alt SemiBold; text-align: center; color: white;">Welcome to LawSuite's Question Prompts</h2>
+        <p class="lead" style="text-align: center; color: grey; font-family: Garamond; font-size: xx-large;">Here are some questions to get the converstation going!</p>
+    </div>
     </div>
 
-    <div class="accordion" id="accordionExample" style="margin: 50px">
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    Strangers
-                </button>
-                </h5>
+    <h1 class="lead" style="text-align: center; color: white; font-family: Garamond; font-size: 30px;">Firstly, have you guys met before?</h1>
+    <div class="gamerow">
+        <div class="col-sm-8 col-md-6">
+        <div class="thumbnail">
+            <div class="large-image">
+                <img src="https://toggl.com/blog/wp-content/uploads/2019/05/how-to-introduce-yourself.jpg" class="img-rounded large-thumbnail-img">
             </div>
-        
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                <p class="questions">
-                    1. What do you like to do in your free time? <br>
-                    2. What's your favourite snack? <br>
-                    3. Where have you travelled to before? <br>
-                    4. Where do you want to travel to next? <br>
-                    5. Apple or Android? <br>
-                    6. Have you attended a hackathon before? <br>
-                </p>
+            <div class="caption">
+            <p><a href="{{url_for('acquaintances')}}" class="btn btn-primary" role="button">Yes, we've met before!</a></p>
+            </div>
+        </div>
+        </div>
+        <div class="col-sm-8 col-md-6">
+            <div class="thumbnail">
+                <div class="large-image">
+                    <img src="https://media.istockphoto.com/vectors/communication-businesswoman-vector-id826570696?k=6&m=826570696&s=612x612&w=0&h=OXvK7dpfaIAvaAvdy2uVUyMUohietzNtof98jDc-pSo=" class="img-rounded large-thumbnail-img">
+                </div>
+                <div class="caption">
+                <p><a href="{{url_for('strangers')}}" class="btn btn-primary" role="button">No, we're strangers!</a></p>
                 </div>
             </div>
-        </div>
-        <div class="card">
-        <div class="card-header" id="headingTwo">
-            <h5 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Acquaintances
-            </button>
-            </h5>
-        </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-            <div class="card-body">
-                <p class="questions">
-                    1. What shows do you watch in your free time? <br>
-                    2. What is your pet peeve? <br>
-                    3. What do you hope never changes? <br>
-                    4. Is there a sector of law you want to specialise in or know more about? <br>
-                    5. What do you wish you knew more about? <br>
-                    6. How different was your life one year ago? <br>
-                </p>
             </div>
-        </div>
-        </div>
-        <div class="card">
-        <div class="card-header" id="headingThree">
-            <h5 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Friends
-            </button>
-            </h5>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-            <div class="card-body">
-                <p class="questions">
-                    1. What's your all time favourite memory? <br>
-                    2. What's your most memorable dream? <br>
-                    3. What other career paths did you consider? <br>
-                    4. What’s the biggest problem in our society? <br>
-                    5. What is one law you would change if you had the power to? <br>
-                    6. Would you change your specialisation? <br>
-                </p>
-            </div>
-        </div>
-        </div>
     </div>
 {% endblock %}

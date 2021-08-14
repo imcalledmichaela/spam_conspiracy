@@ -3,20 +3,20 @@
 
 {% block app_content %}
 <div class=login>
-    <h2 class="row" style="font-family: Recoleta Alt SemiBold;">Sign in to LawSuite</h2>
+    <h1 class="row" style="font-family: Spartan; letter-spacing: 1px;">Sign in to LawSuite</h1>
     <br>
-    <div class="row">
+    <div class="row" style="font-family: Garamond; font-size: large;">
         <form action="" method="post" class="form" role="form">
             {{ form.csrf_token() }}
-            <div class="form-group row-md-6">
+            <div class="form-group row-md-6" style="color: white;">
                 {{ wtf.form_field(form.username, class='form-control', 
                     placeholder='Username') }}
             </div>
-            <div class="form-group row-md-6">
+            <div class="form-group row-md-6" style="color: white;">
                 {{ wtf.form_field(form.password, class='form-control', 
                     placeholder='Password') }}
             </div>
-            <div class="form-group row-md-6">
+            <div class="form-group row-md-6" style="color: white; font-size: medium;">
                 {{ wtf.form_field(form.remember_me, class='form-control', 
                     placeholder='Remember Me') }}
             </div>
@@ -24,6 +24,6 @@
         </form>
     </div>
     <br>
-    <p class="row">New User? &nbsp;<a href="{{ url_for('register') }}"> Click to Register!</a></p>
+    <p class="row" style="color: white; font-family: Garamond; font-size: large;">New User? &nbsp;<a href="{{ url_for('register') }}"> Click to Register!</a></p>
 </div>
 {% endblock %}

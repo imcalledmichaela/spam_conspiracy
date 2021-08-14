@@ -16,6 +16,16 @@ def index():
 def prompts():
     return render_template('prompts.html', title='Question Prompts')
 
+@app.route('/prompts/strangers')
+# @login_required
+def strangers():
+    return render_template('prompts_strangers.html', title='Question Prompts - Stranger')
+
+@app.route('/prompts/acquaintances')
+# @login_required
+def acquaintances():
+    return render_template('prompts_acquaintances.html', title='Question Prompts - Acquaintances')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:

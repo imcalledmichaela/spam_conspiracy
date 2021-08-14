@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="bgimg-1">
+    <div class="pcaption">
+        <span class="border">PROMPT #1</span>
+    </div>
+</div>
+
+<div style="background-color:#292929;text-align:center;padding:50px 80px;text-align: center;">
+    <h2>How different was your life one year ago?</h2>
+</div>
+
+<div class="bgimg-2">
+    <div class="pcaption">
+        <span class="border">PROMPT #2</span>
+    </div>
+</div>
+
+<div style="background-color:#292929;text-align:center;padding:50px 80px;text-align: center;">
+    <h2>What shows do you watch in your free time?</h2>
+</div>
+
+<div class="bgimg-3">
+    <div class="pcaption">
+        <span class="border">PROMPT #3</span>
+    </div>
+</div>
+
+<div style="position:relative;">
+    <div style="background-color:#292929;text-align:center;padding:50px 80px;text-align: center;">
+        <h2>What is your pet peeve?</h2>
+    </div>
+</div>
+
+<div class="bgimg-1">
+    <div class="pcaption">
+        <span class="border">Hope you enjoyed this session!</span>
+    </div>
+    <div class="pbutton">
+        <a href="{{url_for('index')}}"> <button type="button" class="btn btn-default" aria-label="Left Align" style="background-color: #222222;">
+            <span class="glyphicon glyphicon-home" aria-hidden="true" style="font-size: x-large;"></span>
+        </button></a>
+    </div>
+</div>
+
+{% endblock %}

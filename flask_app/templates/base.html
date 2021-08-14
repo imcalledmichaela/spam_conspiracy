@@ -5,6 +5,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 <link rel="stylesheet"
       href="{{url_for('.static', filename='main.css')}}">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Spartan">
 {% endblock %}
 
 {% block title %}
@@ -12,13 +14,14 @@
 {% endblock %}
 
 {% block navbar %}
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div>
-            <a class="navbar-brand" href="{{url_for('index')}}"><h1><span style="color:Navy;">Law</span>Suite</h1></a>
+            <a class="navbar-brand" href="{{url_for('index')}}" style="margin-left: 100px;"><h1>LawSuite</h1></a>
             {% if current_user.is_anonymous %}
-            <a href="{{url_for('login')}}"><button type="button" class="btn btn-default navbar-btn" style="float: right;  margin-right: 10px;">Sign in</button></a>
+            <a href="{{url_for('register')}}"><button type="button" class="btn btn-default navbar-btn" style= "margin-right: 100px;">Sign up</button></a>
+            <a href="{{url_for('login')}}"><button type="button" class="btn btn-default navbar-btn" style= "margin-right: 10px;">Log in</button></a>
             {% else %}
-            <a href="{{url_for('logout')}}"><button type="button" class="btn btn-default navbar-btn" style="float: right;  margin-right: 10px;">Sign out</button></a>
+            <a href="{{url_for('logout')}}"><button type="button" class="btn btn-default navbar-btn" style= "margin-right: 100px;">Log out</button></a>
             {% endif %}
         </div>
     </nav>

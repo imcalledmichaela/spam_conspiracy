@@ -11,13 +11,25 @@
 }
 
 .navbar-brand {
-    font-family: Recoleta Alt SemiBold;
+    font-family: Spartan;
     text-align: center;
+    padding-top: 10px;
+    letter-spacing: -2px;
+}
+
+.btn.btn-default {
+    float: right; 
+    background-color: #c7493a;
+    color: white;
+    font-family: 'Spartan';
+    font-weight: 700;
+    border-radius: 20px
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 87px;
+    background-color: #292929;
 }
 
 .row {
@@ -27,10 +39,17 @@ body {
 }
 
 .btn.btn-primary {
+    font-family: Spartan;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 15px;
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background-color: #c7493a;
+    border-color: #c7493a;
+    border-radius: 20px;
 }
 
 .break {
@@ -49,17 +68,24 @@ body {
     height: 250px;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
     vertical-align: middle;
     text-align: center;
     display: flex;
 }
 
 .description {
-    height: 130px;
+    font-family: Spartan;
+    font-weight:650;
+    color: #CCCCCC;
+    height: 150px;
 }
 
 .large-description {
-    height: 60px;
+    font-family: Spartan;
+    font-weight:650;
+    color: #CCCCCC;
+    height: 80px;
 }
 
 .large-thumbnail-img {
@@ -74,13 +100,26 @@ body {
     height: 380px;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
     vertical-align: middle;
     text-align: center;
     display: flex;
 }
 
+h1 {
+    color: white;
+}
+
+h2{
+    color: white;
+    letter-spacing: 10px;
+}
+
 h3 {
-    font-family: Recoleta Alt SemiBold;
+    font-family: Spartan;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: white;
 }
 
 .questions {
@@ -90,3 +129,59 @@ h3 {
 .card {
     margin-bottom: 20px;
 }
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+.bgimg-1 {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg");
+    min-height: 400px;
+}
+
+.bgimg-2 {
+    background-image: url("https://cdnb.artstation.com/p/assets/images/images/024/538/827/original/pixel-jeff-clipa-s.gif?1582740711");
+    min-height: 400px;
+}
+
+.bgimg-3 {
+    background-image: url("https://lh3.googleusercontent.com/proxy/f3hMDsnrTtnoQ1wzJC412IIhsvIS2PVPW2IFvu-qZF9HVvbR4RAEy3dta55MC9l3SZ2rzEECCOmL7hTimW-aItuT4rBy6WIHwIRnPZFmv-AO6s0tBT3CxuhHZOcwmhgt3MfDTn0_yA");
+    min-height: 400px;
+}
+
+.pcaption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.pbutton {
+    position: absolute;
+    right:50%;
+    margin-right:-19px;
+    top: 70%;
+    width: 100%;
+    text-align: center;
+}
+  
+.pcaption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+.thumbnail {
+    background-color: #222222;
+    border-color: #222222;
+}
+
