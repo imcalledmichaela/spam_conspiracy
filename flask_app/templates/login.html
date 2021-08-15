@@ -5,7 +5,7 @@
 <div class=login>
     <h1 class="row" style="font-family: Spartan; letter-spacing: 1px;">Sign in to LawSuite</h1>
     <br>
-    <div class="row" style="font-family: Garamond; font-size: large;">
+    <div class="row" style="font-family: Spartan; font-size: large;">
         <form action="" method="post" class="form" role="form">
             {{ form.csrf_token() }}
             <div class="form-group row-md-6" style="color: white;">
@@ -24,6 +24,6 @@
         </form>
     </div>
     <br>
-    <p class="row" style="color: white; font-family: Garamond; font-size: large;">New User? &nbsp;<a href="{{ url_for('register') }}"> Click to Register!</a></p>
+    <p class="row" style="color: white; font-family: Spartan; font-size: large;">New User? &nbsp;<a href="{{ url_for('register') }}"> Click to Register!</a></p>
 </div>
 {% endblock %}

@@ -78,14 +78,14 @@ body {
     font-family: Spartan;
     font-weight:650;
     color: #CCCCCC;
-    height: 150px;
+    height: 170px;
 }
 
 .large-description {
     font-family: Spartan;
     font-weight:650;
     color: #CCCCCC;
-    height: 80px;
+    height: 100px;
 }
 
 .large-thumbnail-img {
@@ -150,7 +150,7 @@ h3 {
 }
 
 .bgimg-3 {
-    background-image: url("https://lh3.googleusercontent.com/proxy/f3hMDsnrTtnoQ1wzJC412IIhsvIS2PVPW2IFvu-qZF9HVvbR4RAEy3dta55MC9l3SZ2rzEECCOmL7hTimW-aItuT4rBy6WIHwIRnPZFmv-AO6s0tBT3CxuhHZOcwmhgt3MfDTn0_yA");
+    background-image: url("https://i.redd.it/uq5xi079iqq41.jpg");
     min-height: 400px;
 }
 

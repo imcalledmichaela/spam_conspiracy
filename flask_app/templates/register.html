@@ -4,9 +4,9 @@
 {% block app_content %}
 <div class=login>
     <h1 class="row" style="font-family: Spartan; letter-spacing: 1px;">Welcome to LawSuite</h1>
-    <h5 class="row" style="font-family: Garamond; color: grey;">Register for an account now!</h2>
+    <h5 class="row" style="font-family: Spartan; color: grey;">Register for an account now!</h2>
     <br>
-    <div class="row" style="font-family: Garamond; font-size: large;">
+    <div class="row" style="font-family: Spartan; font-size: large;">
         <form action="" method="post" class="form" role="form">
             {{ form.csrf_token() }}
             <div class="form-group row-md-6" style="color: white;">
@@ -25,6 +25,7 @@
                 {{ wtf.form_field(form.password2, class='form-control', 
                     placeholder='Repeat Password') }}
             </div>
+            <br>
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
